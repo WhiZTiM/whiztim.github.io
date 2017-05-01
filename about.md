@@ -8,8 +8,7 @@ I am Ibrahim (Timothy) Onogu, I love Performance. :-)
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
-This is awesome
+I am still working on this page... :-)
 
 ### Contact me
 

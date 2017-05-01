@@ -106,7 +106,7 @@ namespace std{
         ....
     };
     using string = basic_string<char>;
-}
+} 
 ```
 
 We can then say that, for a `const char*` type, we have viable paths of:
