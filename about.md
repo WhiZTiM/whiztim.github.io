@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am Ibrahim (Timothy) Onogu, I love Performance. :-)
 
 ### More Information
 
 A place to include any other types of information that you'd like to include about yourself.
+This is awesome
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[@whiztim](mailto:whiztim@outlook.com)
