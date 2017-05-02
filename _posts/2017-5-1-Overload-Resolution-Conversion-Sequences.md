@@ -116,7 +116,7 @@ So, the compiler's new quest is to find a matching overload for `const char*` am
 If after one *Standard Conversion Sequence* happens, and a best viable function among the overload set hasn't been produced, the compiler is required to:
 
 1. perform a *User-Defined Conversion Sequence*, or
-2. perform additional conversions, one from each of the remaining [categories](http://eel.is/c++draft/over.best.ics#tab:over.conversions) of *Standard Conversion Sequence* in order.
+2. perform additional conversions, one from each of the [categories](http://eel.is/c++draft/over.best.ics#tab:over.conversions) proceeding the current category of *Standard Conversion Sequence* in order.
 
 ##### 1. Perform a *User-Defined Conversion Sequence*:
 
