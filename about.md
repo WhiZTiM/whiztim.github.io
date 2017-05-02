@@ -5,11 +5,11 @@ permalink: /about/
 ---
 
 I am a 24 year old Nigerian who is passionate about Engineering and every detail about it. I have a degree in Mechanical Engineering, ditto Production Engineering. I love Systems Engineering and Software Engineering. 
-I currently work for nHub Nigeria. *I don't get to use much of C++ there, so I am currently open for a Job opportunity*
+I currently work for nHub Nigeria. *I don't get to use much of C++ there, so I am currently open for a Job opportunity!, here's my [CV](/cv)*. 
 
 ## Ummm... Say waht? I'm a C++ freak
 
-I've been programming in C++ for over 6 years now. And I love writing portable, performant and ISO-C++ standard's compliant code.
+I've been programming in C++ for over 6 years now. And I love writing portable, performant and ISO-C++ standard's compliant code. I'm [active on stackoverflow.com](http://stackoverflow.com/users/1621391/whiztim), currently among the global 0.5%, and the 355th legendary Gold Badge earner in C++. 
 
 While **C++** gives you unfettered control over the Performance of your Software. **C++14** gives you more control over productivity, safety and performance. I love to stay at the bleeding edge of standards and technologies, hence I'm up for most essential parts of **C++17**. While poking my head occationally into the ISO C++ standards committee documents ahead of ***C++20***.
 

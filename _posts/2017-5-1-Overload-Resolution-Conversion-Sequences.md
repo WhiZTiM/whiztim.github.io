@@ -98,22 +98,22 @@ And these rank in the order they appear. Note the "s" in the "sequence**s**" abo
 > - a standard conversion sequence is a better conversion sequence than a user-defined conversion sequence or an ellipsis conversion sequence, and
 > - a user-defined conversion sequence is a better conversion sequence than an ellipsis conversion sequence.
 
-So, as the compiler's overload resolution subsystem considers ICS and tries to apply them in order they appear, the compiler is required to go through viable permutations of the above and rank them.
+The compiler's overload resolution subsystem considers ICS and tries to apply viable permutations of them, then rank the sequences.
 
 It turns out that the only possible ICS for `const char[12]` is "Array-to-pointer" conversion which is a *Standard Conversion Sequence*. "Array to pointer" conversion is typically known as array "decay".
 
 -----------------
 
-So, the compiler's new quest is to find a matching overload for `const char*` among:
+So, having performed the "decay", the compiler begins a new quest of finding a matching overload for `const char*` among:
 
 - `std::string`
 - `bool`
 
-... Unfortunately, we still don't have a best viable function.
+... Unfortunately, it still can't produce a best viable function.
 
 <br />
 
-If after one *Standard Conversion Sequence* happens, and a best viable function among the overload set hasn't been produced, the compiler is required to:
+If after one *Standard Conversion Sequence*, and a best viable function among the overload set hasn't been produced, the compiler is required to:
 
 1. perform a *User-Defined Conversion Sequence*, or
 2. perform additional conversions, one from each of the [categories](http://eel.is/c++draft/over.best.ics#tab:over.conversions) proceeding the current category of *Standard Conversion Sequence* in order.
@@ -142,8 +142,8 @@ In this parital procedure, we can then say that, for a `const char*` type, we ha
 - `bool` from ??
 
 ##### 2. Perform Additional Standard Conversion from proceeding Categories:
-|
-We can convert any pointer to `bool` regardless of its qualification.
+
+Any pointer, regardless of it's qualification can be converted to a `bool` type.
 
 We can then say that, for a `const char*` type, we have viable paths of:
 
