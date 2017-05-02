@@ -4,7 +4,9 @@ title: Overload Resolution, Implicit Conversion Sequences
 comments: true
 ---
 
-#### The overloading story of `std::string` and `bool` for `"Sweet Melon"`
+The overloading story of `std::string` and `bool` for `"Sweet Melon"` and How C++'s *Implicit Conversion Sequences* played out. 
+
+-----------------------
 
 Every now and then we expose overloaded API's in C++. But we seldom do consider How overload resolution works. The rules are more complex than you think, even the ISO C++ standard dedicated several pages of technical text describing it's rules. However, in this article we will only consider The interaction of overload resolution with Implicit Conversion Sequences ..
 
