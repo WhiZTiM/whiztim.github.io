@@ -1,6 +1,7 @@
 
 .highlight {
-  background-color: #efefef;
+  // background-color: #efefef;
+  background-color: white;
   padding: 7px 7px 7px 10px;
   border: 1px solid #ddd;
   -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
@@ -13,6 +14,13 @@
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
 }
+
+.highlighter-rouge .n { color: green; font-family: Courier New, Courier, monospace }
+.highlighter-rouge .s { color: green; font-family: Courier New, Courier, monospace }
+.highlighter-rouge .o { color: green; font-family: Courier New, Courier, monospace }
+.highlighter-rouge .p { color: green; font-family: Courier New, Courier, monospace }
+.highlighter-rouge .kt { color: green; font-family: Courier New, Courier, monospace }
+.highlighter-rouge .mi { color: green; font-family: Courier New, Courier, monospace }
 
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
