@@ -12,11 +12,11 @@ Consider the following snippet:
 
 ```c++
 void foo(int){ 
-    std::cout << "foo(int)" << '\n;
+    std::cout << "foo(int)" << '\n';
 }
 
 void foo(bool){
-    std::cout << "foo(bool)" << '\n;
+    std::cout << "foo(bool)" << '\n';
 }
 
 int main(){
@@ -27,8 +27,8 @@ int main(){
 
 What do you think of its output?
 
-    foo(int)
-    foo(bool)
+>     foo(int)
+>     foo(bool)
 
 This is probably no brainer if you have programmed in C++ using C++03 standard and you've migrated to post C++11. For a simple remainder, `NULL` was simply inherited from C, which is typically a MACRO defined as `#define NULL 0`.
 
@@ -49,13 +49,13 @@ The above, `0` as with any other "value" arabic numeral or integer is known as a
 
 Let's get into the main point, consider the code below:
 
-```c++
+```cpp
 void foo(std::string){
-    std::cout << "foo(std::string)" << '\n;
+    std::cout << "foo(std::string)" << '\n';
 }
 
 void foo(bool){
-    std::cout << "foo(bool)" << '\n;
+    std::cout << "foo(bool)" << '\n';
 }
 
 int main(){
@@ -69,9 +69,9 @@ int main(){
 
 What do you think of it's output?:
 
-    foo(bool)
-    foo(bool)
-    foo(std::string)
+>     foo(bool)
+>     foo(bool)
+>     foo(std::string)
 
 ....WTH! Not intuitive right? It turns out that the "string" `"Sweet Melon"` is not a `std::string` object, but rather a *string literal* of type `const char[12]`. It's type is deduced by the compiler as a `const` array of 12 characters. (remember, *string literals* are **always** implicitly "Null `\0`" terminated by the compiler).
 
