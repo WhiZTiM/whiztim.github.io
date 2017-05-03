@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a 24 year old Nigerian who is passionate about Engineering and every detail about it. I have a degree in Mechanical Engineering, ditto Production Engineering. I love Systems Engineering and Software Engineering. 
+I am a Nigerian who is passionate about Engineering and every detail about it. I have a degree in Mechanical Engineering, ditto Production Engineering. I love Systems Engineering and Software Engineering. 
 I currently work for nHub Nigeria. *I don't get to use much of C++ there, so I am currently open for a Job opportunity!, here's my [CV](/cv)*. 
 
 ## Ummm... Say waht? I'm a C++ freak
