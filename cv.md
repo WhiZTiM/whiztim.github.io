@@ -26,13 +26,17 @@ permalink: /cv/
 
 #### Projects Authored
 
-- **ParserDataStructures**: An Open Source and production-ready implementation of basic C++ STL containers suitable for recursive data structures. Suitable for JSON and other serialization formats and libraries. Its a C++11 project.
+- [**ParserDataStructures**](https://github.com/WhiZTiM/ParserDataStructures): An Open Source and production-ready implementation of basic C++ STL containers suitable for recursive data structures. Suitable for JSON and other serialization formats and libraries. Its a C++11 project. 
 
-- **UbexCpp**: An Open Source, production quality, C++14 implementation of the Uncomplicated Binary EXchange serialization protocol. It has a loosely typed value-like semmantics found in other languages.
+- [**UbexCpp**](https://github.com/WhiZTiM/UbexCpp): An Open Source, production quality, C++14 implementation of the Uncomplicated Binary EXchange serialization protocol. It has a loosely typed value-like semmantics found in other languages.
 
-- **UbjsonCpp**: An Open Source, production quality, C++14 implementation of the [Universial Binary JSON](http://ubjson.org). It has a loosely typed value-like semmantics found in other languages.
+- [**UbjsonCpp**](https://github.com/WhiZTiM/UbjsonCpp): An Open Source, production quality, C++14 implementation of the [Universial Binary JSON](http://ubjson.org). It has a loosely typed value-like semmantics found in other languages.
 
-- **Duplichase**: A fast open Source filesystem duplicate file detector. Its backened is writtin in pure C++11 with boost library (for its cross-platform filesystem API) 
+- [**Duplichase**](https://sourceforge.net/projects/duplichase/): A fast open Source filesystem duplicate file detector. Its backened is writtin in pure C++11 with boost library (for its cross-platform filesystem API) 
+
+  - [On Github](https://github.com/WhiZTiM/duplichase)
+  - [On Sourceforge](https://sourceforge.net/projects/duplichase/)
+  - [On Softpedia](http://www.softpedia.com/get/System/File-Management/DupLichaSe.shtml)
 
 ------------------------
 
