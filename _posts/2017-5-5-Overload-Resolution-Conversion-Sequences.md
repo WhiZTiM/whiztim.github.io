@@ -4,7 +4,7 @@ title: Overload Resolution, Implicit Conversion Sequences
 comments: true
 ---
 
-The overloading story of `std::string` and `bool` for `"Sweet Melon"` and How C++'s *Implicit Conversion Sequences* played out. 
+The overloading story of `std::string` and `bool` for `"Sweet Melon"` and How C++'s *Implicit Conversion Sequences* played out.... 
 
 -----------------------
 
@@ -124,7 +124,7 @@ If after one *Standard Conversion Sequence*, and a best viable function among th
 
 ```c++
 namespace std{
-    template<typename CharT, 
+    template<typename CharT,
              typename Traits = std::char_traits<CharT>,
              typename Allocator = std::allocator<CharT>>
     class basic_string{
@@ -151,7 +151,7 @@ We can then say that, for a `const char*` type, we have viable paths of:
 - `bool` from `const char*` (standard conversion)
 
 Implicit conversion of a pointer type to a `bool` is a *Standard Conversion Sequence* and it ranks higher than `std::string`'s converting constructor which is a *User-defined Conversion Sequence*. (Remember, anything not defined by the core language, is assumed to be user defined in C++'s pureview, even an STL type!)
-
+ 
 
 ---------------
 Feedbacks, corrections to my mail below \\
