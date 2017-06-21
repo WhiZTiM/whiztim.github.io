@@ -63,7 +63,7 @@ Interestingly, (most at times) the data doesn't need to be re-read from RAM, bec
 
 Note: Today, the compilers and interpreters of those other languages are heavily optimized to be able to make direct calls, hence making certain Java programs as fast as its C++ equivalent.
 
-If You are REALLY interested in the ADVANCED stuff, head to http://en.wikipedia.org/wiki/Call_stack ...start from there and dig in deeper.
+If You are REALLY interested in the ADVANCED stuff, head to [http://en.wikipedia.org/wiki/Call_stack](http://en.wikipedia.org/wiki/Call_stack) ...start from there and dig in deeper.
 
 ### ==============
 
