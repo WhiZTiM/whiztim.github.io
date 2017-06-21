@@ -21,7 +21,7 @@ Musa is in a warehose full of Boxes; Now, there is long enclosed rail with only 
 ### Relating the above.....
 
 Your program starts from the *function* `main()`; in this case, you have given Musa a box to process;
-Musa, places the Box on the end of the rail, plugs it and starts processing it. While processing the given items in the box, he reaches a point where he cannot proceed without the result of another function(Box); He then suspends the current items he is processing, in an attempt to obtain that very function (Box);
+Musa, places the Box on the end of the rail, plugs it and starts processing it. While processing the given items in the box, he reaches a point where he cannot proceed without the result of another function(Box); He then suspends the current items he is processing, in an attempt to obtain the other function (Box) needs;
 
 ##### Calling a function
 
