@@ -46,7 +46,7 @@ We can simply view a "stack" as part of your RAM that is grows further and shrin
 - There is something called **stack unwinding**. This simply means the minimum work you must do to remove boxes from the rail.
 - There is something called **stack overflow**. This simply means having too much items on your rail to extents that it's full, therefore, preventing you to push more boxes into it.
 - When a program is *multi-threaded*, it means, you have multiple *Threads* (box rails) and *Executors*(Musa)
-- Functions may be inlined, meaning embedding the processing operations of a box in a calling box, thus Musa, doesn't have the burden of going to look for it. (His current Box does it.)
+- Functions may be inlined, meaning embedding the processing operations of a box in a *calling box*, thus Musa, doesn't have the burden of going to look for it. (His current Box does it.)
 - Every program starts with a function. (some may be in a global disguise, like scripting languages)
 
 ### Technical

@@ -10,6 +10,8 @@ permalink: /cv/
 
 - **nHub Nigeria Limited** (March 2017 – Present): .................................................................................. Software Engineer – *(C++ language specialist and trainer; Performance and Optimization;*
 
+- **Codementor** (May 2017 – Present): ............................................................................................ Expert Mentor – *(C++ and Python Programming language; Algorithmic designs)*
+
 - **Fiverr** (January 2015 – Present): ...................................................................................................... Freelance Software Developer 
 
 - **Federal College of (Technical) Education. F.C.E(T) Gombe** (December 2016 – March 2017): ................... Equipment and Procurement Intern – *(Procurement and Maintenance of general Assets)*
@@ -21,6 +23,7 @@ permalink: /cv/
 #### Education
 
 - **Abubakar Tafawa Balewa University** (2010 – 2015) B.Eng. in Mechanical and Production Engineering; (CGPA: 4.16 on a scale of 5.00) *Thesis: Simulation, Design, Construction and Testing of a Subsonic Wind Tunnel*
+
 
 --------------------------------
 
