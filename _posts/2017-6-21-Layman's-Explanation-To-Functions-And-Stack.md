@@ -16,7 +16,7 @@ In this post, I use everyday terminology to explain how functions work, and what
 
 Consider a man named Musa who has to execute some tasks; those tasks are fully wrapped in a box. Think of each box like a portable version of your local Grinding Machines/Blender where you grind Tomatoes, maize, and so on; You know there are different kinds, sizes, and types of grinding Machines, so are there different type of boxes :-).
 
-Musa is in a warehose full of Boxes; Now There is long enclosed rail with only one end accessible to Musa where he can push Boxes to, if he wishes; Each box cannot work on its own without a power supply; And the only power supply is at the end of the rail, where Musa sits.
+Musa is in a warehose full of Boxes; Now, there is long enclosed rail with only one end accessible to Musa where he can push Boxes to, if he wishes; Each box cannot work on its own without a power supply; And the only power supply is at the end of the rail, where Musa sits.
 
 ### Relating the above.....
 
