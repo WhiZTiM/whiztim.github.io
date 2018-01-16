@@ -4,7 +4,7 @@ title: STL and the Strict Weak Ordering
 comments: true
 ---
 
-Everyday, I see a lot of so-called generic fuctions that uses more than one relational operator; This introduces unecessary strain on the clients of such code.
+When people write so called *generic* algorithms out there online, a lot of the the so-called generic fuctions uses more than one relational operator to order a sequence; This introduces unecessary strain on the clients of such code or makes some poor assumptions about the datatype we want to use.
 
 -----------------------
 
