@@ -8,9 +8,13 @@ permalink: /cv/
 
 #### Work Experience
 
-- **nHub Nigeria Limited** (March 2017 – Present): .................................................................................. Software Engineer – *(C++ language specialist and trainer; Performance and Optimization;*
+- **(Somewhere in the World)** (February 2018 – .....): ........................................................................ Software Engineer – *Backend and Infrastructure (hopefully.) :-)*
 
-- **Codementor** (May 2017 – Present): ............................................................................................ Expert Mentor – *(C++ and Python Programming language; Algorithmic designs)*
+
+
+- **nHub Nigeria Limited** (March 2017 – January 2018): ....................................................................... Software Engineer – *(C++ language specialist and trainer; Performance and Optimization;*
+
+- **Codementor** (May 2017 – Present): ............................................................................................... Expert Mentor – *(C++ and Python Programming language; Algorithmic designs)*
 
 - **Fiverr** (January 2015 – Present): ...................................................................................................... Freelance Software Developer 
 
