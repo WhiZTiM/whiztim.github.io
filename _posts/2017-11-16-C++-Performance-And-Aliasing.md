@@ -114,15 +114,49 @@ struct Wx{
 };
 ```
 
-We are more interested in this line:
+For example, let us say `values` points to an array of integers starting out at address `0xb344e1`:
 
+    Index: 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 ..
+    Value: 1  2  3  4  5  6  7  8  9  8  7  6  5  4  3  2  ..
+
+And let us say `d->value` points to an integer outside the above array: say at address `0xcc2001`, and the value of the integer there is `9`; The above loop is simply saying add `9 + (1 + 2 + 3 ...)` (to the 15th index of `value`), then store in where ever `d->value` points to.
+
+So for the example above, *after* each iteration of `i`:
+
+    |  i  | *d->value | values[i] |              values              |
+    ==================================================================
+    |prior|      9    |    N/A    | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    ------------------------------------------------------------------
+    |  0  |     10    |     1     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  1  |     12    |     2     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  2  |     15    |     3     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  3  |     19    |     4     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  4  |     24    |     5     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  5  |     30    |     6     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  6  |     37    |     7     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  7  |     45    |     8     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  8  |     54    |     9     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    |  9  |     62    |     8     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    | 10  |     69    |     7     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    | 11  |     75    |     6     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    | 12  |     80    |     5     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    | 13  |     84    |     4     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    | 14  |     87    |     3     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+    | 15  |     89    |     2     | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2  |
+
+As we can see, `values[i]` *for* `0 <= i < 16` doesn't change thus, we can do a [vector add](https://en.wikipedia.org/wiki/Automatic_vectorization) of `values[i]` *for* `0 <= i < 16` - summing it up manually yields `80`, adding that to `*d->value`(`9`), we have `89`;
+
+So, by [vectorization](https://en.wikipedia.org/wiki/Automatic_vectorization), we look at this line fulfilling the underlisted conditions:
 
 ```c++
     for(int i = 0; i < 16; i++)
         *d->value = *d->value + values[i];
 ```
 
-Since we know `i` increases from *`[0, 16)`*, and the expression `values[i]` isn't undefined behavior, we can conclude that the memory of the elements at any `values[i]` and `values[i+1]` (where `i+1 < 16`) do not overlap. That conclusion makes it possible to [vectorize](https://en.wikipedia.org/wiki/Automatic_vectorization) the addition of non-overlapping elements then add the final results to `*d->value`; I mean hypothetically, transform the above code into:
+1. Since we know `i` increases from *`[0, 16)`*, 
+  * and we assume the expression `values[i]` doesn't invoke undefined behavior for any `0 <= i < 16`,
+2. we can conclude that the memory of the elements at any `values[i]` and `values[i+1]` (where `i+1 < 16`) do not overlap. 
+3. then it is possible to [vectorize](https://en.wikipedia.org/wiki/Automatic_vectorization)(assuming suitable alignments) the addition of non-overlapping elements then add the final results to `*d->value`; I mean hypothetically, transform the above code into:
 
 ```c++
     auto ans = vector_add(values, 0, 16); //move elements to vector registers and add all
@@ -130,6 +164,38 @@ Since we know `i` increases from *`[0, 16)`*, and the expression `values[i]` isn
 ```
 
 However, the above code is not a valid transformation of the former code - because `d->value` may infact be pointing an element within `values` *`[0, 16)`*. meaning that each assignment of `d->value` may have subsequent side effect on an element in the rest of the array.
+
+As an example:
+
+For example, let us say `values` points to an array of integers starting out at address `0xb344e1`:
+
+    Index: 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 ..
+    Value: 1  2  3  4  5  6  7  8  9  8  7  6  5  4  3  2  ..
+
+And let us say `d->value` point to an integer inside the above array: say at address `0xb344e1 + sizeof(int) * 9` (the *8th* index whose value is `9`); So for the example above, *after* each iteration of `i`:
+
+    |  i  | *d->value | values[i] |              values               |
+    ===================================================================
+    |prior|      9    |    N/A    | 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2   |
+    -------------------------------------------------------------------
+    |  0  |     10    |     1     | 1 2 3 4 5 6 7 8 10 8 7 6 5 4 3 2  |
+    |  1  |     12    |     2     | 1 2 3 4 5 6 7 8 12 8 7 6 5 4 3 2  |
+    |  2  |     15    |     3     | 1 2 3 4 5 6 7 8 15 8 7 6 5 4 3 2  |
+    |  3  |     19    |     4     | 1 2 3 4 5 6 7 8 19 8 7 6 5 4 3 2  |
+    |  4  |     24    |     5     | 1 2 3 4 5 6 7 8 24 8 7 6 5 4 3 2  |
+    |  5  |     30    |     6     | 1 2 3 4 5 6 7 8 30 8 7 6 5 4 3 2  |
+    |  6  |     37    |     7     | 1 2 3 4 5 6 7 8 37 8 7 6 5 4 3 2  |
+    |  7  |     45    |     8     | 1 2 3 4 5 6 7 8 45 8 7 6 5 4 3 2  |
+    |  8  |     54    |     9     | 1 2 3 4 5 6 7 8 54 8 7 6 5 4 3 2  |
+    |  9  |    108    |     8     | 1 2 3 4 5 6 7 8 108 8 7 6 5 4 3 2 |
+    | 10  |    115    |     7     | 1 2 3 4 5 6 7 8 115 8 7 6 5 4 3 2 |
+    | 11  |    121    |     6     | 1 2 3 4 5 6 7 8 121 8 7 6 5 4 3 2 |
+    | 12  |    126    |     5     | 1 2 3 4 5 6 7 8 126 8 7 6 5 4 3 2 |
+    | 13  |    130    |     4     | 1 2 3 4 5 6 7 8 130 8 7 6 5 4 3 2 |
+    | 14  |    133    |     3     | 1 2 3 4 5 6 7 8 133 8 7 6 5 4 3 2 |
+    | 15  |    135    |     2     | 1 2 3 4 5 6 7 8 135 8 7 6 5 4 3 2 |
+
+As you can see, the results are different. This happens because each modification to `*d->value` affects some item in `values[i]`. We can actaully be a bit smart to insert some code for dynamic vectorization, but as of the time of writing, neither GCC nor clang seem to do vectorization in parts(we vectorize up to where overlap starts, do plain add during overlap,, vectorize from where overlap ends)
 
 -----------------------------------
 
