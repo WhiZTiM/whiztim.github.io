@@ -4,25 +4,26 @@ title: About
 permalink: /about/
 ---
 
-I am a Nigerian who is passionate about Engineering and every detail about it. I have a degree in Mechanical Engineering, ditto Production Engineering. I love Systems Engineering and Software Engineering. 
-I used to work for [nHub Nigeria](http://nhubnigeria.com) (its a nice place to work), but I'll soon join another amazing company that solve interesting problems. *While my new job will not be C++, I'll still be very much involved in C++ evangelism, My [CV](/cv)*.
-
-I've been programming in C++ for over 7 years now. And I love writing portable, performant and ISO-C++ standard's compliant code. I'm [active on stackoverflow.com](http://stackoverflow.com/users/1621391/whiztim), currently among the global 0.5%, and the 355th legendary Gold Badge earner in C++.
-
+I am passionate about Engineering and every detail about it. I have a degree in Mechanical Engineering, ditto Production Engineering. I love Systems Engineering and Software Engineering. 
+. *While my current doesn't involve C++, I'm still be very much involved in C++ evangelism, My [**CV**](/cv)*.
 
 ## Interests?
 
 - I am interested in working on Business and Performance Critical Software.
 - I am interesting in optimizing production throughput.
+- In the past few months, I've been working on with <u>Security: Identity and Access Management</u>, I've fallen in love with that domain, *Thanks to my current employer :-)*
 
 ## More Information
 
 - I enjoy playing Piano. Currently learning classical music
-- I play a bit of the guitar
-- I love photography, and exploration.
-- **I love having a family to fall back to when its all said and done. :-)**
+- I love photography, exploration, playing with kids, numbers, graphs and charts;
+- I love **teamwork** and every synergy involved; I love having a hardworking team with a great sense of humor and fun, a team who can laugh at our mistakes, learn, and rebound quickly;
+- I am likely to stick with an employer that allows me reasonable time to spend with my wife and kids *(when I do get married and have kids of cause; :-) )*;
 
-#### [Read More About me...](/about-rant)
+# **I love my time with family when its all said and done. :-)**
+
+#### Read [More About me...](/about-rant)
+#### or [My CV](/cv)
 
 ### Contact me
 

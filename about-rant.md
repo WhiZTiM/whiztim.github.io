@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Some Rants
+title: Some Extra Info :-)
 permalink: /about-rant/
 ---
 
 -----------------------
 
-## Ummm... Say waht? I'm a C++ freak
+I've been programming in C++ for some good years now. And I love writing portable, performant and ISO-C++ standard's compliant code. I'm [active on stackoverflow.com](http://stackoverflow.com/users/1621391/whiztim), currently among the global 0.5%, and the 355th legendary Gold Badge earner in C++.
 
 While **C++** gives you unfettered control over the Performance of your Software. **C++17** gives you more control over productivity, safety and performance. I love to stay at the bleeding edge of standards and technologies, hence I've had experience writing **C++98**, **C++03**, **C++11**, **C++14**, and **C++17** - At the same time, I regularly poke my head into the ISO C++ standards committee documents ahead of ***C++20***.
 
@@ -31,18 +31,6 @@ PS: *Great job to the C++ Community, the ISO C++ members, and Herb Sutter!*
 Of cause. C++ wouldn't be my first and last choice for a lot of stuff. I have trained and fought wars with other Artilleries including **C**, **C#**, **Java**, **JavaScript ECMA2015 (NodeJS)** and **Python**. My current job involves a dose of **Java** and **Perl**; with some **Typescript/Javascript**, **Go**, and some toolings/scripts on DevOps.
 
 
-## Interests?
+------------------
 
-- I am interested in working on Business and Performance Critical Software.
-- I am interesting in optimizing production throughput.
-
-## More Information
-
-- I enjoy playing Piano. Currently learning classical music
-- I play a bit of the guitar
-- I love photography, and exploration.
-- I love having a family to fall back to when its all said and done. :-)
-
-### Contact me
-
-[@whiztim](mailto:whiztim@outlook.com)
+*Contact me [@whiztim](mailto:whiztim@outlook.com)*
