@@ -8,17 +8,16 @@ permalink: /cv/
 
 #### Work Experience
 
-- **(Somewhere in the World)** (February 2018 – .....): ........................................................................ Software Engineer – *Backend and Infrastructure (hopefully.) :-)*
+- **(Booking.com)** (February 2018 – Present): ....................................................................................... Software Engineer – *Backend Engineer on Identity and Access Management Infrastructure :-)*
 
 
+- **nHub Nigeria Limited** (March 2017 – January 2018): .......................................................................... Software Engineer – *(C++ language specialist and trainer; Performance and Optimization;*
 
-- **nHub Nigeria Limited** (March 2017 – January 2018): ....................................................................... Software Engineer – *(C++ language specialist and trainer; Performance and Optimization;*
+- **Codementor** (May 2017 – Present): ................................................................................................. Expert Mentor – *(C++ and Python Programming language; Algorithmic designs)*
 
-- **Codementor** (May 2017 – Present): ............................................................................................... Expert Mentor – *(C++ and Python Programming language; Algorithmic designs)*
+- **Fiverr** (January 2015 – Present): ..................................................................................................... Freelance Software Developer 
 
-- **Fiverr** (January 2015 – Present): ...................................................................................................... Freelance Software Developer 
-
-- **Federal College of (Technical) Education. F.C.E(T) Gombe** (December 2016 – March 2017): ................... Equipment and Procurement Intern – *(Procurement and Maintenance of general Assets)*
+- **Federal College of (Technical) Education. F.C.E(T) Gombe** (December 2016 – March 2017):  .................. Equipment and Procurement Intern – *(Procurement and Maintenance of general Assets)*
 
 - **Shell Nigeria Exploration and Production Company** (August 2014 - December 2014): ............................ Trainee Subsea Systems Engineer (Assessed Internship Programme) – *(Worked directly under the supervision and mentorship of the most senior Technical Authority in Subsea Systems; to improve Jumper Delivery System)*
 
